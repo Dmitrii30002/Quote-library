@@ -40,7 +40,7 @@ func main() {
 		}
 	})
 
-	cfg, err := config.New("../.env", "../config/config.json")
+	cfg, err := config.New(".env", "config/config.json")
 	if err != nil {
 		log.Fatalf("[ERROR] Config loading error: %v", err)
 	}
