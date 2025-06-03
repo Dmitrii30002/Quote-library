@@ -24,17 +24,21 @@ git clone https://github.com/Dmitrii30002/Quote-library.git
 
 3. Запуск БД: \
    Запуск БД на устройстве, лиюо заапуск контейнера с PostgreSQL:
+   ``` bash
+   docker run --name postgres -e POSTGRES_DB=postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres:15
+   ```
 
 5. Запуск проекта:
 ``` bash
 go build cmd/main.go
+./main.exe
 ```
 
 # Эндпоинты:
 
 |Метод	    |Путь	              |Описание                                    |
 |:----------|:------------------|:-------------------------------------------|
-|GET	      |/songs	            |Список всех песен (с фильтрами и пагинацией)|
+|GET	      |/quotes	            |Список всех цитат |
 |POST	      |/songs	            |Добавить новую песню                        |
 |PUT	      |/songs/:id	        |Обновить данные песни                       |
 |DELETE	    |/songs/:id	        |Удалить песню                               |
